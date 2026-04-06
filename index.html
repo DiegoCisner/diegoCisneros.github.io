@@ -3,74 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Cisneros | Portafolio</title>
+    <title>Diego Cisneros | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-[#0f172a] text-slate-300 font-sans selection:bg-blue-500/30">
 
-    <nav class="p-6 bg-white shadow-sm flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-xl font-bold border-2 border-black px-2">DC</h1>
-        <div class="space-x-6">
-            <a href="#proyectos" class="hover:text-blue-600 transition">Proyectos</a>
-            <a href="#habilidades" class="hover:text-blue-600 transition">Habilidades</a>
-            <a href="mailto:isaaccisnerosd@gmial.com" class="bg-black text-white px-4 py-2 rounded shadow-lg">Contacto</a>
+    <nav class="max-w-5xl mx-auto p-8 flex justify-between items-center">
+        <h1 class="text-white font-black text-2xl tracking-tighter">DIEGO<span class="text-blue-500">CISNEROS</span></h1>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#proyectos" class="hover:text-white transition">Proyectos</a>
+            <a href="mailto:isaaccisnerosd@gmial.com" class="hover:text-white transition">Contacto</a>
         </div>
     </nav>
 
-    <header class="py-20 px-6 text-center max-w-4xl mx-auto">
-        <h2 class="text-5xl font-extrabold mb-6">Soy un Ingeniero en Sistemas que construye soluciones reales.</h2>
-        <p class="text-xl text-gray-600 leading-relaxed">
-            Me especializo en el desarrollo <strong>Full-Stack</strong>, creando interfaces modernas en <strong>Flutter</strong> y backends sólidos en Node.js, Java o Python.
+    <header class="max-w-5xl mx-auto py-24 px-8">
+        <span class="text-blue-400 font-mono mb-4 block">Ingeniero en Sistemas de Información</span>
+        <h2 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">Construyo experiencias móviles y sistemas escalables.</h2>
+        <p class="text-lg max-w-2xl text-slate-400 mb-10 leading-relaxed">
+            Soy un desarrollador enfocado en el stack <strong>Full-Stack</strong>. Especialista en <strong>Flutter</strong> para interfaces modernas y backends robustos en <strong>Node.js, Java y Python</strong>.
         </p>
+        <div class="flex gap-4">
+            <a href="https://github.com/DiegoCisner" target="_blank" class="bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-blue-500 hover:text-white transition">GitHub</a>
+            <a href="https://www.linkedin.com/" target="_blank" class="border border-slate-700 px-6 py-3 rounded-full font-bold hover:border-blue-400 transition">LinkedIn</a>
+        </div>
     </header>
 
-    <section id="proyectos" class="py-16 bg-white px-6">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-3xl font-bold mb-10 border-l-4 border-blue-600 pl-4">Proyectos Destacados</h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                
-                <div class="border rounded-xl p-6 hover:shadow-xl transition group">
-                    <span class="text-blue-600 font-semibold uppercase text-sm">Mobile & AI</span>
-                    <h4 class="text-2xl font-bold mt-2">MaizApp (Play Store)</h4>
-                    <p class="mt-4 text-gray-600">App móvil en Flutter para diagnosticar enfermedades en cultivos con IA, desplegada en AWS mediante microservicios en Docker.</p>
-                    <div class="mt-6 flex gap-2 flex-wrap">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs">Flutter</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs">Node.js</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs">AWS</span>
-                    </div>
-                </div>
+    <section class="max-w-5xl mx-auto px-8 py-12 border-y border-slate-800">
+        <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+            <i class="devicon-flutter-plain text-4xl" title="Flutter"></i>
+            <i class="devicon-nodejs-plain text-4xl" title="Node.js"></i>
+            <i class="devicon-python-plain text-4xl" title="Python"></i>
+            <i class="devicon-spring-plain text-4xl" title="Spring Boot"></i>
+            <i class="devicon-laravel-plain text-4xl" title="Laravel"></i>
+            <i class="devicon-docker-plain text-4xl" title="Docker"></i>
+            <i class="devicon-amazonwebservices-original text-4xl" title="AWS"></i>
+            <i class="devicon-postgresql-plain text-4xl" title="PostgreSQL"></i>
+        </div>
+    </section>
 
-                <div class="border rounded-xl p-6 hover:shadow-xl transition group">
-                    <span class="text-green-600 font-semibold uppercase text-sm">Enterprise Web</span>
-                    <h4 class="text-2xl font-bold mt-2">Sistemas Transaccionales & BI</h4>
-                    <p class="mt-4 text-gray-600">Desarrollo de plataformas web robustas con Laravel y Spring Boot, integrando dashboards de Power BI para análisis de KPIs.</p>
-                    <div class="mt-6 flex gap-2 flex-wrap">
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs">Java</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs">PHP</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs">Power BI</span>
-                    </div>
+    <section id="proyectos" class="max-w-5xl mx-auto py-24 px-8">
+        <h3 class="text-2xl font-bold text-white mb-12">Proyectos Seleccionados</h3>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="group relative">
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 group-hover:border-blue-500/50 transition">
+                    <h4 class="text-xl font-bold text-white mb-2">MaizApp — Mobile & AI</h4>
+                    <p class="text-slate-400 mb-6">Diagnóstico de enfermedades en cultivos mediante Visión Artificial. Microservicios coordinados con Docker y AWS.</p>
+                    <a href="TU_LINK_DE_PLAY_STORE" target="_blank" class="text-blue-400 font-bold text-sm inline-flex items-center group-hover:underline">
+                        VER EN PLAY STORE 
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
                 </div>
+            </div>
 
+            <div class="group relative">
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 group-hover:border-green-500/50 transition">
+                    <h4 class="text-xl font-bold text-white mb-2">Sistemas Transaccionales</h4>
+                    <p class="text-slate-400 mb-6">Plataformas empresariales desarrolladas en Java y PHP con integración de dashboards de Power BI para KPIs críticos.</p>
+                    <span class="text-slate-500 font-bold text-sm tracking-widest uppercase">Arquitectura Backend</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="habilidades" class="py-16 px-6 max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold mb-10 border-l-4 border-black pl-4">Stack Tecnológico</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">Dart / Flutter</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">Python / Django</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">Java / Spring Boot</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">Node.js / Express</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">PHP / Laravel</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">Docker / AWS</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">PostgreSQL</div>
-            <div class="p-4 bg-gray-100 rounded-lg font-bold">English B1</div>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center border-t">
-        <p class="text-gray-500">© 2026 Diego Cisneros. Construido con Tailwind CSS.</p>
+    <footer class="max-w-5xl mx-auto py-12 px-8 text-center text-slate-500 text-sm border-t border-slate-800">
+        <p>© 2026 Diego Cisneros. Ingeniero en Sistemas de Información.</p>
     </footer>
 
 </body>

@@ -3,143 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Cisneros | Ingeniero en Sistemas</title>
+    <title>Diego Cisneros | Software Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        .tech-card:hover i { transform: translateY(-5px); transition: all 0.3s; }
     </style>
 </head>
-<body class="bg-[#f8fafc] text-slate-800">
+<body class="bg-[#ffffff] text-slate-900">
 
-    <nav class="sticky top-0 z-50 glass border-b border-slate-200 py-4 px-6">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <span class="font-extrabold text-xl tracking-tighter text-blue-600">DIEGO CISNEROS</span>
-            <div class="space-x-8 text-sm font-semibold text-slate-500 uppercase tracking-wider">
-                <a href="#sobre-mi" class="hover:text-blue-600 transition">Sobre mí</a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 py-5 px-8">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="font-bold text-lg tracking-tight">DIEGO <span class="text-blue-600">CISNEROS</span></span>
+            <div class="hidden md:flex space-x-10 text-[12px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                <a href="#sobre-mi" class="hover:text-blue-600 transition">Perfil</a>
                 <a href="#proyectos" class="hover:text-blue-600 transition">Proyectos</a>
                 <a href="#contacto" class="hover:text-blue-600 transition">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <header id="sobre-mi" class="max-w-5xl mx-auto py-20 px-6 grid md:grid-cols-3 gap-12 items-center">
-        <div class="md:col-span-2">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-                Hola, soy Diego. <br><span class="text-blue-600">Ingeniero en Sistemas.</span>
+    <header id="sobre-mi" class="max-w-6xl mx-auto pt-40 pb-20 px-8 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-3/5 text-center md:text-left">
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter leading-none mb-8">
+                Ingeniero en <br><span class="text-blue-600">Sistemas.</span>
             </h1>
-            <p class="text-xl text-slate-600 leading-relaxed mb-8">
-                Me especializo en el desarrollo <strong>Full-Stack</strong>. Soy un apasionado por construir soluciones funcionales, desde aplicaciones móviles en <strong>Flutter</strong> hasta backends robustos con microservicios. Mi objetivo es transmitir seguridad y calidad en cada línea de código.
+            <p class="text-xl text-slate-500 max-w-xl leading-relaxed mb-10">
+                Soy un desarrollador <strong>Full-Stack</strong> enfocado en crear software de alto impacto. Desde apps móviles en <strong>Flutter</strong> hasta arquitecturas escalables en la nube.
             </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="https://github.com/DiegoCisner" target="_blank" class="bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-600 transition shadow-lg">GitHub</a>
-                <a href="https://www.linkedin.com/" target="_blank" class="border-2 border-slate-200 px-8 py-3 rounded-full font-bold hover:border-blue-600 hover:text-blue-600 transition">LinkedIn</a>
+            <div class="flex flex-wrap justify-center md:justify-start gap-5">
+                <a href="https://github.com/DiegoCisner" target="_blank" class="bg-black text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition shadow-xl text-sm">GitHub</a>
+                <a href="mailto:isaaccisnerosd@gmail.com" class="border border-slate-200 px-10 py-4 rounded-full font-bold hover:bg-slate-50 transition text-sm">Contratame</a>
             </div>
         </div>
-        <div class="flex justify-center">
-            <img src="perfilxd_11zon.jpg" alt="Diego Cisneros" class="w-64 h-64 object-cover rounded-3xl shadow-2xl border-4 border-white">
+        <div class="md:w-2/5 flex justify-center mt-16 md:mt-0">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-blue-100 rounded-full blur-2xl opacity-50"></div>
+                <img src="perfilxd_11zon.jpg" alt="Diego Cisneros" class="relative w-72 h-72 object-cover rounded-full border-[12px] border-white shadow-2xl">
+            </div>
         </div>
     </header>
 
-    <section class="bg-white py-16 border-y border-slate-100">
-    <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-center text-slate-400 font-bold uppercase tracking-widest text-sm mb-12">Tecnologías que domino</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 text-center">
-            
-            <div class="flex flex-col items-center group">
-                <i class="devicon-flutter-plain text-5xl text-slate-300 group-hover:text-[#02569B] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Flutter</span>
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-8">
+            <p class="text-center text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px] mb-16">Stack Tecnológico</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-12">
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-flutter-plain text-4xl text-slate-300 mb-4 hover:text-[#02569B]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Flutter</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-nodejs-plain text-4xl text-slate-300 mb-4 hover:text-[#339933]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Node.js</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-python-plain text-4xl text-slate-300 mb-4 hover:text-[#3776AB]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Python</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-spring-plain text-4xl text-slate-300 mb-4 hover:text-[#6DB33F]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Spring</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-laravel-plain text-4xl text-slate-300 mb-4 hover:text-[#FF2D20]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Laravel</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-docker-plain text-4xl text-slate-300 mb-4 hover:text-[#2496ED]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Docker</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-amazonwebservices-plain-wordmark text-4xl text-slate-300 mb-4 hover:text-[#FF9900]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">AWS</span>
+                </div>
+                <div class="tech-card flex flex-col items-center">
+                    <i class="devicon-postgresql-plain text-4xl text-slate-300 mb-4 hover:text-[#336791]"></i>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase">Postgres</span>
+                </div>
             </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-nodejs-plain text-5xl text-slate-300 group-hover:text-[#339933] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Node.js</span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-python-plain text-5xl text-slate-300 group-hover:text-[#3776AB] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Python</span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-spring-plain text-5xl text-slate-300 group-hover:text-[#6DB33F] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Spring</span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-laravel-plain text-5xl text-slate-300 group-hover:text-[#FF2D20] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Laravel</span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-docker-plain text-5xl text-slate-300 group-hover:text-[#2496ED] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Docker</span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-amazonwebservices-original text-5xl text-slate-300 group-hover:text-[#FF9900] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">AWS</span>
-            </div>
-
-            <div class="flex flex-col items-center group">
-                <i class="devicon-postgresql-plain text-5xl text-slate-300 group-hover:text-[#336791] transition mb-3"></i>
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Postgres</span>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
-    <section id="proyectos" class="max-w-5xl mx-auto py-24 px-6">
-        <h2 class="text-3xl font-black text-slate-900 mb-16">Proyectos Destacados</h2>
+    <section id="proyectos" class="max-w-6xl mx-auto py-32 px-8">
+        <h2 class="text-sm font-bold text-blue-600 uppercase tracking-[0.4em] mb-20 text-center">Proyectos Seleccionados</h2>
         
-        <div class="space-y-20">
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <img src="image_fb1a7d.png" alt="Logo MaizApp" class="rounded-2xl shadow-xl w-full max-w-sm mx-auto">
-                <div>
-                    <span class="text-blue-600 font-bold text-sm tracking-widest uppercase">Tesis de Grado | Mobile & IA</span>
-                    <h3 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4">MaizApp</h3>
-                    <p class="text-slate-600 text-lg mb-6">
-                        Desarrollo de una aplicación móvil para el diagnóstico de enfermedades en hojas de maíz amarillo utilizando Inteligencia Artificial (CNN). Implementé una arquitectura escalable con Dockers y desplegada en la nube para el control fitosanitario en Latacunga.
+        <div class="space-y-40">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl bg-slate-100">
+                    <img src="tesis_maiz.png" alt="MaizApp" class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <span class="h-px w-8 bg-blue-600"></span>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Tesis de Grado</span>
+                    </div>
+                    <h3 class="text-4xl font-extrabold mb-6 tracking-tight">MaizApp: IA en el campo.</h3>
+                    <p class="text-slate-500 text-lg leading-relaxed mb-8">
+                        Sistema experto para diagnóstico fitosanitario mediante Redes Neuronales Convolucionales. Arquitectura distribuida con Node.js y despliegue automatizado en AWS.
                     </p>
-                    <a href="https://play.google.com/store/apps/details?id=com.diego.maizapp&hl=es" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-bold shadow-md hover:bg-blue-700 transition">Ver en Play Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.diego.maizapp&hl=es" class="font-bold text-sm border-b-2 border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition">Explorar en Play Store</a>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div class="order-2 md:order-1">
-                    <span class="text-emerald-600 font-bold text-sm tracking-widest uppercase">Web Systems</span>
-                    <h3 class="text-3xl font-extrabold text-slate-900 mt-2 mb-4">Sistemas Web & GIS</h3>
-                    <p class="text-slate-600 text-lg mb-6">
-                        Desarrollo de aplicaciones web transaccionales y Sistemas de Información Geográfica (GIS) utilizando <strong>PHP (Laravel)</strong>, <strong>Python (Django)</strong> y <strong>Java (Spring Boot)</strong>. Enfoque en seguridad y manejo eficiente de datos.
-                    </p>
+            <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                <div class="w-full md:w-1/2 overflow-hidden rounded-3xl shadow-2xl bg-slate-900 p-10 flex items-center justify-center text-white">
+                    <i class="devicon-code-plain text-[150px] opacity-20"></i>
                 </div>
-                <div class="order-1 md:order-2 bg-slate-100 p-12 rounded-2xl flex justify-center text-slate-300">
-                    <i class="devicon-code-plain text-9xl"></i>
+                <div class="w-full md:w-1/2">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <span class="h-px w-8 bg-emerald-600"></span>
+                        <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Arquitectura Web</span>
+                    </div>
+                    <h3 class="text-4xl font-extrabold mb-6 tracking-tight">Ecosistemas Transaccionales.</h3>
+                    <p class="text-slate-500 text-lg leading-relaxed mb-8">
+                        Desarrollo de sistemas complejos en Java Spring Boot y PHP Laravel. Integración de bases de datos masivas y visualización de datos estratégica.
+                    </p>
+                    <span class="text-slate-300 font-bold text-[10px] uppercase tracking-widest">Enterprise Solution</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="bg-blue-600 py-20 px-6 text-center text-white">
-        <h2 class="text-4xl font-black mb-6">¿Tienes un proyecto en mente?</h2>
-        <p class="text-xl mb-10 opacity-90">Estoy disponible para nuevas oportunidades y colaboraciones.</p>
-        <div class="flex flex-wrap justify-center gap-8">
-            <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-md">
-                <p class="text-sm uppercase font-bold mb-1 opacity-70">Email</p>
-                <p class="text-lg font-bold text-white">isaaccisnerosd@gmail.com</p>
-            </div>
-            <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-md">
-                <p class="text-sm uppercase font-bold mb-1 opacity-70">Teléfono</p>
-                <p class="text-lg font-bold text-white">+593 980675312</p>
+    <section id="contacto" class="py-32 px-8 bg-slate-900 text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl font-extrabold mb-8 tracking-tighter">¿Hablamos?</h2>
+            <p class="text-slate-400 text-lg mb-16 max-w-md mx-auto">Disponible para proyectos freelance o vacantes Full-Stack. Mi enfoque es la seguridad y la escalabilidad.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-10 items-center">
+                <a href="mailto:isaaccisnerosd@gmail.com" class="text-xl font-bold hover:text-blue-400 transition">isaaccisnerosd@gmail.com</a>
+                <span class="hidden md:block w-2 h-2 bg-slate-700 rounded-full"></span>
+                <a href="tel:+593980675312" class="text-xl font-bold hover:text-blue-400 transition">+593 980 675 312</a>
             </div>
         </div>
     </section>
 
-    <footer class="py-10 text-center text-slate-400 text-sm">
-        © 2026 Diego Cisneros • Ingeniero en Sistemas de Información
+    <footer class="py-12 text-center text-slate-300 text-[10px] font-bold uppercase tracking-[0.4em]">
+        © 2026 Diego Cisneros • Latacunga, Ecuador
     </footer>
 
 </body>

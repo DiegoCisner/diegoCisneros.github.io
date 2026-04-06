@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; overflow-x: hidden; }
         .grid-bg { background-image: radial-gradient(#f1f1f1 1px, transparent 1px); background-size: 30px 30px; }
         .text-fino { font-weight: 200; letter-spacing: -0.01em; }
         
-        /* EFECTO DE SOMBRADO UNIFICADO PARA IMÁGENES */
         .hover-shadow-effect {
             transition: all 0.4s ease;
             filter: grayscale(100%);
@@ -40,9 +39,9 @@
         </div>
     </nav>
 
-    <main class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 px-10 py-32">
+    <main class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 px-10 pt-32 pb-10">
         
-        <aside class="md:col-span-4 border-r border-gray-100 pr-10 space-y-12">
+        <aside class="md:col-span-4 border-r border-gray-100 pr-10 space-y-12 h-fit">
             <div>
                 <h1 class="text-5xl font-extrabold tracking-tighter leading-none mb-6 text-black">DIEGO<br>CISNEROS<span class="text-blue-600">.</span></h1>
                 <p class="text-[9px] font-black uppercase tracking-[0.2em] text-blue-600">Ingeniero en Sistemas de Información | Full-Stack Developer</p>
@@ -55,13 +54,13 @@
             <div class="space-y-5 text-xs">
                 <h3 class="text-xs font-bold uppercase tracking-widest text-black mb-4">Contacto</h3>
                 <div class="flex items-center gap-2 text-gray-500">
-                    <i class="fas fa-map-marker-alt text-red-500"></i> Quito, Ecuador 🇪🇨
+                    <i class="fas fa-map-marker-alt text-red-500 w-4"></i> Quito, Ecuador 🇪🇨
                 </div>
                 <div class="flex items-center gap-2 text-gray-500">
-                    <i class="devicon-google-plain text-red-600"></i> <a href="mailto:isaaccisnerosd@gmail.com" class="hover:text-black italic truncate">isaaccisnerosd@gmail.com</a>
+                    <i class="fas fa-envelope text-red-600 w-4"></i> <a href="mailto:isaaccisnerosd@gmail.com" class="hover:text-black italic truncate">isaaccisnerosd@gmail.com</a>
                 </div>
                 <div class="flex items-center gap-2 text-gray-500">
-                    <i class="fab fa-whatsapp text-green-500 text-lg"></i> +593 980 675 312
+                    <i class="fab fa-whatsapp text-green-500 text-lg w-4"></i> +593 980 675 312
                 </div>
                 <div class="pt-6 flex gap-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition">
                     <a href="https://github.com/DiegoCisner" target="_blank" class="text-2xl"><i class="fab fa-github"></i></a>
@@ -75,83 +74,82 @@
             <section id="perfil" class="max-w-3xl">
                 <h2 class="text-xl font-bold uppercase tracking-[0.2em] text-black mb-10 border-b-2 border-black pb-2 inline-block">Sobre mí</h2>
                 <p class="text-3xl font-light text-gray-700 leading-snug text-fino">
-                    Soy un Ingeniero en Sistemas enfocado en el desarrollo integral de software. Desde la maquetación UI/UX y el frontend responsivo, hasta la construcción de backends robustos en Node.js-Express, Java-Spring Boot y Python-Django. Mi enfoque garantiza seguridad y escalabilidad en cada proyecto.
+                    Soy un Ingeniero en Sistemas enfocado en el desarrollo integral de software. Desde el diseño **UI/UX** y frontend responsivo, hasta backends robustos en Node.js, Java y Python. Mi enfoque garantiza soluciones seguras y escalables para cualquier desafío tecnológico.
                 </p>
             </section>
 
             <section id="habilidades">
                 <h2 class="text-xl font-bold uppercase tracking-[0.2em] text-black mb-12 border-b-2 border-black pb-2 inline-block">Habilidades</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 text-center text-slate-400">
+                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 text-center text-slate-400">
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-flutter-plain text-4xl mb-3 group-hover:text-[#02569B] transition"></i>
+                        <i class="devicon-flutter-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Flutter</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-nodejs-plain text-4xl mb-3 group-hover:text-[#339933] transition"></i>
+                        <i class="devicon-nodejs-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Node.js</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-python-plain text-4xl mb-3 group-hover:text-[#3776AB] transition"></i>
+                        <i class="devicon-python-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Python</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-spring-plain text-4xl mb-3 group-hover:text-[#6DB33F] transition"></i>
+                        <i class="devicon-spring-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Spring</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-laravel-plain text-4xl mb-3 group-hover:text-[#FF2D20] transition"></i>
+                        <i class="devicon-laravel-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Laravel</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-docker-plain text-4xl mb-3 group-hover:text-[#2496ED] transition"></i>
+                        <i class="devicon-docker-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Docker</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-amazonwebservices-original text-4xl mb-3 group-hover:text-[#FF9900] transition"></i>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" class="w-10 h-10 mb-3" alt="AWS">
                         <span class="text-[9px] font-bold uppercase tracking-tighter">AWS</span>
                     </div>
                     <div class="group flex flex-col items-center">
-                        <i class="devicon-postgresql-plain text-4xl mb-3 group-hover:text-[#336791] transition"></i>
+                        <i class="devicon-postgresql-plain colored text-4xl mb-3 transition"></i>
                         <span class="text-[9px] font-bold uppercase tracking-tighter">Postgres</span>
                     </div>
                 </div>
             </section>
 
-            <section id="proyectos" class="space-y-32">
+            <section id="proyectos" class="space-y-20">
                 <h2 class="text-xl font-bold uppercase tracking-[0.2em] text-black mb-16 border-b-2 border-black pb-2 inline-block">Proyectos</h2>
                 
-                <div class="grid md:grid-cols-5 gap-10 items-center">
+                <div class="grid md:grid-cols-5 gap-10 items-center border-b border-gray-50 pb-16">
                     <div class="md:col-span-3">
                         <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Tesis / Móvil e IA</span>
                         <h3 class="text-4xl font-extrabold text-black mt-2 mb-4 tracking-tighter">MaizApp</h3>
                         <p class="text-gray-600 text-sm leading-relaxed text-fino mb-6 max-w-lg">
-                            Desarrollé una aplicación móvil en Flutter capaz de diagnosticar enfermedades fitosanitarias en cultivos de maíz amarillo mediante Visión Artificial (CNN). El backend se basó en microservicios contenerizados en Docker y desplegados en servidores **AWS EC2**.
+                            Aplicación móvil en Flutter para diagnosticar enfermedades fitosanitarias mediante IA. Backend en microservicios con Docker y despliegue en AWS EC2.
                         </p>
-                        <a href="https://play.google.com/store/apps/details?id=com.diego.maizapp" target="_blank" class="text-xs font-bold border-b-2 border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition">VER EN PLAY STORE</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.diego.maizapp" target="_blank" class="text-xs font-bold border-b-2 border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition">VER EN STORE</a>
                     </div>
                     <div class="md:col-span-2 flex justify-center">
-                        <img src="tesis_maiz.png" class="w-full h-auto max-w-sm rounded-xl hover-shadow-effect shadow-2xl">
+                        <img src="tesis_maiz.png" class="w-full h-auto max-w-[280px] rounded-xl hover-shadow-effect shadow-2xl">
                     </div>
                 </div>
 
-                <div class="pt-10 border-t border-gray-100 flex flex-col md:flex-row gap-10">
+                <div class="flex flex-col md:flex-row gap-10">
                     <div class="w-full md:w-3/5">
-                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Enterprise Systems</span>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Empresarial</span>
                         <h3 class="text-4xl font-extrabold text-black mt-2 mb-4 tracking-tighter">Sistemas Transaccionales</h3>
                         <p class="text-gray-700 text-sm leading-relaxed text-fino mb-6">
-                            He diseñado e implementado plataformas web seguras y dashboards transaccionales. Especialista en la creación de dashboards en Power BI conectados a bases de datos en tiempo real para la extracción automatizada de KPIs estratégicos.
+                            Diseño de plataformas seguras y dashboards en Power BI con datos en tiempo real para análisis de KPIs estratégicos.
                         </p>
                     </div>
                     <div class="w-full md:w-2/5 p-8 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center">
-                        <i class="devicon-code-plain text-slate-200 text-9xl hover:text-slate-400 transition"></i>
+                        <i class="devicon-code-plain text-slate-200 text-9xl"></i>
                     </div>
                 </div>
             </section>
-
         </div>
     </main>
 
-    <footer class="py-12 border-t border-gray-50 text-center">
+    <footer class="py-8 border-t border-gray-50 text-center bg-white">
         <p class="text-[9px] font-bold text-gray-300 uppercase tracking-[0.5em]">© 2026 Diego Cisneros • Quito, Ecuador</p>
     </footer>
 

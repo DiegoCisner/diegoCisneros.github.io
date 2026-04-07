@@ -4,601 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Cisneros | Ingeniero en Sistemas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
-        :root {
-            --black: #0a0a0a;
-            --white: #f5f5f0;
-            --gray: #6b6b6b;
-            --light: #ebebeb;
-            --accent: #0a0a0a;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        html { scroll-behavior: smooth; }
-
         body {
             font-family: 'DM Sans', sans-serif;
-            background-color: var(--white);
-            color: var(--black);
-            overflow-x: hidden;
+            margin:0;
+            background:#f5f5f0;
+            color:#0a0a0a;
         }
 
-        /* NAV */
         nav {
             position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 4rem;
-            background: rgba(245,245,240,0.9);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--light);
-        }
-        .nav-logo {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.3rem;
-            letter-spacing: 0.05em;
-            color: var(--black);
-        }
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-        .nav-links a {
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: var(--gray);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--black); }
-
-        /* LAYOUT */
-        .wrapper {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 3rem;
+            width:100%;
+            background:#fff;
+            display:flex;
+            justify-content:space-between;
+            padding:1rem 2rem;
+            border-bottom:1px solid #ddd;
         }
 
-        /* HERO */
         .hero {
-            padding-top: 7rem;
-            padding-bottom: 5rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            border-bottom: 1px solid var(--light);
+            padding:120px 40px;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:40px;
         }
-        .hero-left {}
-        .hero-tag {
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: var(--gray);
-            display: inline-block;
-            padding: 0.4rem 0.9rem;
-            border: 1px solid #ccc;
-            border-radius: 999px;
-            margin-bottom: 2rem;
-        }
+
         .hero-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(5rem, 10vw, 9rem);
-            line-height: 0.92;
-            letter-spacing: 0.02em;
-            color: var(--black);
+            font-size:80px;
+            font-family:'Bebas Neue';
         }
-        .hero-name span { color: var(--gray); }
+
         .hero-desc {
-            margin-top: 2.5rem;
-            font-size: 1.05rem;
-            font-weight: 300;
-            line-height: 1.75;
-            color: #444;
-            max-width: 42ch;
+            margin-top:20px;
+            line-height:1.6;
         }
-        .hero-cta-row {
-            margin-top: 2.5rem;
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        .btn-primary {
-            display: inline-block;
-            background: var(--black);
-            color: var(--white);
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            padding: 0.85rem 2rem;
-            border-radius: 2px;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .btn-primary:hover { opacity: 0.75; }
-        .btn-ghost {
-            display: inline-block;
-            color: var(--black);
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            padding: 0.85rem 2rem;
-            border: 1px solid #ccc;
-            border-radius: 2px;
-            text-decoration: none;
-            transition: border-color 0.2s;
-        }
-        .btn-ghost:hover { border-color: var(--black); }
 
-        .hero-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 2rem;
-        }
-        .hero-photo {
-            width: 260px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 4px;
-            filter: grayscale(100%);
-            transition: filter 0.5s ease;
-        }
-        .hero-photo:hover { filter: grayscale(0%); }
-
-        .contact-pills {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            align-self: flex-start;
-        }
-        .contact-pill {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.72rem;
-            color: var(--gray);
-            text-decoration: none;
-        }
-        .contact-pill i { width: 14px; text-align: center; }
-        .contact-pill:hover { color: var(--black); }
-
-        .social-row {
-            display: flex;
-            gap: 1rem;
-        }
         .social-row a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px; height: 38px;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            color: var(--gray);
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .social-row a:hover {
-            border-color: var(--black);
-            color: var(--black);
+            margin-right:10px;
+            font-size:20px;
+            color:#555;
         }
 
-        /* SECTION HEADER */
-        .section-label {
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
-            color: var(--gray);
-            margin-bottom: 0.75rem;
-        }
-        .section-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            letter-spacing: 0.04em;
-            line-height: 1;
-            color: var(--black);
+        .skills {
+            padding:60px 40px;
         }
 
-        /* SKILLS */
-        .skills-section {
-            padding: 6rem 0;
-            border-bottom: 1px solid var(--light);
-        }
-        .skills-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 4rem;
-        }
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 0;
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:20px;
         }
+
         .skill-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 2rem 1rem;
-            border: 1px solid var(--light);
-            margin: -1px 0 0 -1px;
-            transition: all 0.3s;
-            cursor: default;
-        }
-        .skill-item:hover {
-            background: var(--black);
-            z-index: 1;
-        }
-        .skill-item:hover .skill-name { color: var(--white); }
-        .skill-item i {
-            font-size: 2.5rem;
-            transition: transform 0.3s;
-        }
-        .skill-item:hover i { transform: scale(1.15); }
-        .skill-item img {
-            width: 2.5rem;
-            height: 2.5rem;
-            object-fit: contain;
-            transition: transform 0.3s;
-        }
-        .skill-item:hover img { transform: scale(1.15); filter: brightness(10); }
-        .skill-name {
-            font-size: 0.58rem;
-            font-weight: 700;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--gray);
-            transition: color 0.3s;
+            text-align:center;
         }
 
-        /* PROJECTS */
-        .projects-section {
-            padding: 6rem 0;
-        }
-        .projects-header {
-            margin-bottom: 5rem;
-        }
-        .project-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            border: 1px solid var(--light);
-            margin-bottom: 2px;
-            overflow: hidden;
-        }
-        .project-row.reverse { direction: rtl; }
-        .project-row.reverse > * { direction: ltr; }
-
-        .project-info {
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1.2rem;
-        }
-        .project-tag {
-            font-size: 0.58rem;
-            font-weight: 700;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: var(--gray);
-        }
-        .project-title {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3.5rem;
-            letter-spacing: 0.03em;
-            line-height: 1;
-            color: var(--black);
-        }
-        .project-desc {
-            font-size: 0.9rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #555;
-            max-width: 40ch;
-        }
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.62rem;
-            font-weight: 700;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--black);
-            text-decoration: none;
-            padding-bottom: 3px;
-            border-bottom: 1px solid var(--black);
-            width: fit-content;
-            transition: opacity 0.2s;
-        }
-        .project-link:hover { opacity: 0.5; }
-
-        .project-visual {
-            position: relative;
-            overflow: hidden;
-            min-height: 380px;
-            background: #f0f0ec;
-        }
-        .project-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(40%);
-            transition: filter 0.5s ease, transform 0.5s ease;
-        }
-        .project-row:hover .project-visual img {
-            filter: grayscale(0%);
-            transform: scale(1.03);
-        }
-
-        /* code-themed visual for BI project */
-        .bi-visual {
-            background: var(--black);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 3rem;
-            font-family: 'DM Mono', monospace;
-            gap: 0.6rem;
-            min-height: 380px;
-        }
-        .bi-line {
-            font-size: 0.72rem;
-            font-family: monospace;
-            color: #888;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .bi-line.hi { color: #fff; font-weight: 600; }
-        .bi-line.kw { color: #aaa; }
-        .bi-bar-row {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-        }
-        .bi-bar-label { font-size: 0.58rem; color: #777; font-family: monospace; min-width: 40px; }
-        .bi-bar-track { flex: 1; height: 2px; background: #222; }
-        .bi-bar-fill { height: 2px; background: #fff; transition: width 1s ease; }
-        .bi-bar-val { font-size: 0.58rem; color: #aaa; font-family: monospace; min-width: 36px; text-align: right; }
-
-        /* FOOTER */
-        footer {
-            border-top: 1px solid var(--light);
-            padding: 2.5rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .footer-copy {
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            color: #bbb;
-        }
-        .footer-name {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1rem;
-            letter-spacing: 0.1em;
-            color: #ccc;
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .fade-up {
-            opacity: 0;
-            animation: fadeUp 0.8s ease forwards;
-        }
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.25s; }
-        .delay-3 { animation-delay: 0.4s; }
-        .delay-4 { animation-delay: 0.55s; }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            nav { padding: 1rem 1.5rem; }
-            .nav-links { gap: 1.5rem; }
-            .wrapper { padding: 0 1.5rem; }
-            .hero { grid-template-columns: 1fr; padding-top: 6rem; }
-            .hero-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
-            .hero-photo { width: 160px; height: 200px; }
-            .skills-grid { grid-template-columns: repeat(4, 1fr); }
-            .project-row, .project-row.reverse { grid-template-columns: 1fr; direction: ltr; }
-            .project-visual { min-height: 240px; }
+        .projects {
+            padding:60px 40px;
         }
     </style>
 </head>
+
 <body>
 
 <nav>
-    <span class="nav-logo">Diego Cisneros</span>
-    <ul class="nav-links">
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-    </ul>
+    <span>Diego Cisneros</span>
+    <div>
+        <a href="#perfil">Perfil</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+    </div>
 </nav>
 
-<div class="wrapper">
+<section class="hero" id="perfil">
 
-    <!-- HERO -->
-    <section class="hero" id="perfil">
-        <div class="hero-left">
-            <div class="hero-tag fade-up delay-1">Disponible para trabajar · Ecuador 🇪🇨</div>
-            <h1 class="hero-name fade-up delay-2">DIEGO<br><span>CISNE</span>ROS</h1>
-            <p class="hero-desc fade-up delay-3">
-                Ingeniero en Sistemas enfocado en desarrollo full-stack. Desde interfaces UI/UX hasta backends robustos en Node.js, Java y Python. Soluciones seguras, escalables y con propósito.
-            </p>
-            <div class="hero-cta-row fade-up delay-4">
-                <a href="/cdn-cgi/l/email-protection#97fee4f6f6f4f4fee4f9f2e5f8e4f3d7f0faf6fefbb9f4f8fa" class="btn-primary">Contactar</a>
-                <a href="#proyectos" class="btn-ghost">Ver proyectos</a>
-            </div>
+    <div>
+        <h1 class="hero-name">DIEGO CISNEROS</h1>
+
+        <!-- 🔥 AQUÍ ESTÁ TU CAMBIO -->
+        <p class="hero-desc">
+            Ingeniero en Sistemas enfocado en desarrollo full-stack. 
+            Desde interfaces UI/UX hasta backends robustos en Node.js, Java, Python y PHP con Laravel. 
+            Soluciones seguras, escalables y con propósito.
+        </p>
+
+        <div class="social-row">
+            <a href="https://github.com/DiegoCisner" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
+    </div>
 
-        <div class="hero-right fade-up delay-2">
-            <div class="contact-pills">
-                <a href="/cdn-cgi/l/email-protection#68011b09090b0b011b060d1a071b0c280f05090104460b0705" class="contact-pill">
-                    <i class="fas fa-envelope"></i> <span class="__cf_email__" data-cfemail="d9b0aab8b8babab0aab7bcabb6aabd99beb4b8b0b5f7bab6b4">[email&#160;protected]</span>
-                </a>
-                <a href="tel:+593980675312" class="contact-pill">
-                    <i class="fab fa-whatsapp"></i> +593 980 675 312
-                </a>
-                <span class="contact-pill">
-                    <i class="fas fa-map-marker-alt"></i> Quito, Ecuador
-                </span>
-                <div class="social-row" style="margin-top:0.5rem">
-                    <a href="https://github.com/DiegoCisner" target="_blank" rel="noopener" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-            <img src="perfilxd_11zon.jpg" alt="Diego Cisneros" class="hero-photo">
-        </div>
-    </section>
+    <div>
+        <img src="perfilxd_11zon.jpg" width="250">
+    </div>
 
-    <!-- SKILLS -->
-    <section class="skills-section" id="habilidades">
-        <div class="skills-header">
-            <div>
-                <p class="section-label">Stack tecnológico</p>
-                <h2 class="section-title">HABILIDADES</h2>
-            </div>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-item">
-                <i class="devicon-flutter-plain colored"></i>
-                <span class="skill-name">Flutter</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-dart-plain colored"></i>
-                <span class="skill-name">Dart</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-nodejs-plain colored"></i>
-                <span class="skill-name">Node.js</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-python-plain colored"></i>
-                <span class="skill-name">Python</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-django-plain colored"></i>
-                <span class="skill-name">Django</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-java-plain colored"></i>
-                <span class="skill-name">Java</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-spring-plain colored"></i>
-                <span class="skill-name">Spring Boot</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-php-plain colored"></i>
-                <span class="skill-name">PHP</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-laravel-plain colored"></i>
-                <span class="skill-name">Laravel</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-csharp-plain colored"></i>
-                <span class="skill-name">C#</span>
-            </div>
-            <div class="skill-item">
-                <i class="devicon-docker-plain colored"></i>
-                <span class="skill-name">Docker</span>
-            </div>
-            <div class="skill-item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
-                <span class="skill-name">AWS</span>
-            </div>
-        </div>
-    </section>
+</section>
 
-    <!-- PROJECTS -->
-    <section class="projects-section" id="proyectos">
-        <div class="projects-header">
-            <p class="section-label">Trabajo seleccionado</p>
-            <h2 class="section-title">PROYECTOS</h2>
-        </div>
+<section class="skills" id="habilidades">
+    <h2>HABILIDADES</h2>
 
-        <!-- Project 1 -->
-        <div class="project-row">
-            <div class="project-info">
-                <span class="project-tag">Tesis · Móvil · IA</span>
-                <h3 class="project-title">MAIZAPP</h3>
-                <p class="project-desc">
-                    Aplicación móvil en Flutter para diagnosticar enfermedades del maíz mediante inteligencia artificial. Backend en microservicios con Docker y despliegue en AWS EC2.
-                </p>
-                <a href="https://play.google.com/store/apps/details?id=com.diego.maizapp" target="_blank" class="project-link">
-                    Ver en Play Store <i class="fas fa-arrow-right" style="font-size:0.6rem"></i>
-                </a>
-            </div>
-            <div class="project-visual">
-                <img src="tesis_maiz.png" alt="MaizApp">
-            </div>
-        </div>
+    <div class="skills-grid">
+        <div class="skill-item"><i class="devicon-flutter-plain colored"></i><p>Flutter</p></div>
+        <div class="skill-item"><i class="devicon-dart-plain colored"></i><p>Dart</p></div>
+        <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><p>Node.js</p></div>
+        <div class="skill-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+        <div class="skill-item"><i class="devicon-django-plain colored"></i><p>Django</p></div>
+        <div class="skill-item"><i class="devicon-java-plain colored"></i><p>Java</p></div>
+        <div class="skill-item"><i class="devicon-spring-plain colored"></i><p>Spring Boot</p></div>
+        <div class="skill-item"><i class="devicon-php-plain colored"></i><p>PHP</p></div>
+        <div class="skill-item"><i class="devicon-laravel-plain colored"></i><p>Laravel</p></div>
+        <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C#</p></div>
+        <div class="skill-item"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+    </div>
+</section>
 
-        <!-- Project 2 -->
-        <div class="project-row reverse">
-            <div class="project-info">
-                <span class="project-tag">Empresarial · BI · Dashboards</span>
-                <h3 class="project-title">SISTEMAS TRANSACCIONALES</h3>
-                <p class="project-desc">
-                    Plataformas seguras con dashboards en Power BI y datos en tiempo real para análisis de KPIs estratégicos. Integración fluida entre bases de datos y visualización ejecutiva.
-                </p>
-            </div>
-            <div class="bi-visual">
-                <div class="bi-line kw">-- KPI Dashboard · Power BI</div>
-                <div class="bi-line hi">SELECT kpi, valor, periodo</div>
-                <div class="bi-line">FROM transacciones</div>
-                <div class="bi-line">WHERE estado = 'activo'</div>
-                <div class="bi-line kw">ORDER BY periodo DESC;</div>
+<section class="projects" id="proyectos">
+    <h2>PROYECTOS</h2>
 
-                <div class="bi-bar-row">
-                    <span class="bi-bar-label">Ventas</span>
-                    <div class="bi-bar-track"><div class="bi-bar-fill" style="width:87%"></div></div>
-                    <span class="bi-bar-val">87%</span>
-                </div>
-                <div class="bi-bar-row">
-                    <span class="bi-bar-label">Retención</span>
-                    <div class="bi-bar-track"><div class="bi-bar-fill" style="width:72%"></div></div>
-                    <span class="bi-bar-val">72%</span>
-                </div>
-                <div class="bi-bar-row">
-                    <span class="bi-bar-label">Crecimiento</span>
-                    <div class="bi-bar-track"><div class="bi-bar-fill" style="width:94%"></div></div>
-                    <span class="bi-bar-val">94%</span>
-                </div>
-                <div class="bi-bar-row">
-                    <span class="bi-bar-label">NPS</span>
-                    <div class="bi-bar-track"><div class="bi-bar-fill" style="width:61%"></div></div>
-                    <span class="bi-bar-val">61%</span>
-                </div>
-            </div>
+    <h3>MAIZAPP</h3>
+    <p>App móvil con IA para detección de enfermedades en maíz.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.diego.maizapp" target="_blank">
+        Ver en Play Store
+    </a>
+
+    <h3>SISTEMAS TRANSACCIONALES</h3>
+    <p>Dashboards en Power BI con KPIs en tiempo real.</p>
+
+</section>
+
+</body>
+</html>
